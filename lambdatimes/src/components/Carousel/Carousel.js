@@ -73,10 +73,11 @@ export default class Carousel extends Component {
 
   leftClick = () => {
     if (this.state.current > 0) {
-      this.setState({
+      return this.setState({
         current: this.state.current - 1
       });
     }
+    this.setState({ current: 3 });
   };
 
   rightClick = () => {
