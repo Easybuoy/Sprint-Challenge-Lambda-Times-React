@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -6,7 +7,7 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={""}
+      className={"tab"}
       onClick={() => {
         props.selectTabHandler(props.tab);
         /* Replace this dummy click handler function with your selectTabHandler function from props 
@@ -21,3 +22,8 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 
 export default Tab;
+
+Tab.propTypes = {
+  tab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired
+}
