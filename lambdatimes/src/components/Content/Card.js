@@ -1,18 +1,61 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const StyledCard = styled.div`
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  background-color: #fff;
+  width: 380px;
+  margin-bottom: 16px;
+  padding: 24px;
+`;
+
+const StyledCardHeader = styled.div`
+  font-size: 25px;
+  font-family: Didot, serif;
+`;
+
+const StyledCardAuthor = styled.div`
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 15px;
+`;
+
+const StyledCardImageContainer = styled.div`
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
+
+  img {
+    width: 40px;
+  }
+`;
+
+const StyledCardSpan = styled.span`
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+`;
 
 const Card = props => {
   const { author, headline, img } = props.card;
   return (
-    <div className="card">
-      <div className="headline">{headline}</div>
-      <div className="author">
-        <div className="img-container">
+    <StyledCard>
+      <StyledCardHeader>{headline}</StyledCardHeader>
+      <StyledCardAuthor>
+        <StyledCardImageContainer>
           <img src={img} alt={author} />
-        </div>
-        <span>By {author}</span>
-      </div>
-    </div>
+        </StyledCardImageContainer>
+        <StyledCardSpan>By {author}</StyledCardSpan>
+      </StyledCardAuthor>
+    </StyledCard>
   );
 };
 
