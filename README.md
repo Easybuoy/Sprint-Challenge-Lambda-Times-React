@@ -28,10 +28,21 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 ## Self-Study/Essay Questions
 
-- [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
-- [ ] Describe a life-cycle event in React?
-- [ ] Explain the details of a Higher Order Component?
-- [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+- [x] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+    PropTypes are used for TypeChecking props in a component. It is important to TypeCheck because it can be used
+    to resolve prop issues quickly.
+
+- [x] Describe a life-cycle event in React?
+    A life-cucle event in react is an event that triggers based on the component behaviour. e.g when a component state changes, a `componentDidUpdate` life-cycle event is fired. 
+
+- [x] Explain the details of a Higher Order Component?
+    A Higher Order Component is a component is used for re-usability of logic so it is not done multiple times it also has the ability to add more props to a given component.
+
+- [x] What are three different ways to style components in React? Explain some of the benefits of each.
+    A Component can be styled using:
+    - External styling (External css file imported into the component. This is highly re-usable, but has leaking tendencies.).
+    - Inline styling (Inline Javascript object styling. Cannot be highly re-used).
+    - Stled Component (Component based styling. Highly re-usable and avoids leakage).
 
 ## Project Setup
 
